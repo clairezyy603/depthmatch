@@ -1,0 +1,24 @@
+h5ad: my_data.h5ad
+layer: counts
+label_key: cell_type
+query_key: low_quality_group
+batch_key: library_id
+out: depthmatch_results
+
+reference_types: [Alveolar macrophage, Monocyte, Plasma cell, AT2, T cell]
+
+candidates:
+  groupA: [Alveolar macrophage, Monocyte, Plasma cell]
+  groupB: [AT2, Alveolar macrophage]
+
+mixed:
+  - {group: groupB, type_a: AT2, type_b: Alveolar macrophage}
+
+clonality:
+  groups: [groupA]
+  plasma_type: Plasma cell
+
+params:
+  n_ref: 1500
+  n_ds: 600
+  min_detect: 0.3

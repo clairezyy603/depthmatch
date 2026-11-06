@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "depthmatch"
+version = "0.1.0"
+description = "Depth-matched identity calls for low-information single-cell clusters"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Claire Zhang"}]
+requires-python = ">=3.9"
+dependencies = ["scanpy>=1.9", "anndata>=0.9", "numpy", "pandas", "scipy", "pyyaml"]
+
+[project.scripts]
+depthmatch = "depthmatch.cli:main"
+
+[tool.setuptools]
+packages = ["depthmatch"]
